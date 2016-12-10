@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.amber-deep_orange.min.css" />
+    <script defer src="js/material.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <!-- Simple header with fixed tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row" style="color:white;">
+      <!-- Title -->
+      <span class="mdl-layout-title white">Info <b>Kampus</b></span>
+      <div class="mdl-layout-spacer"></div>
+      <div class="menu" id="menu">
+        <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">more_vert</i>
+        </button>
+
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+            for="demo-menu-lower-right">
+          <li class="mdl-menu__item">isi</li>
+          <li class="mdl-menu__item">isi</li>
+          <li disabled class="mdl-menu__item">judul disable</li>
+          <li class="mdl-menu__item">isi</li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="background:orange; ">
+      <a href="#fixed-tab-1" class="mdl-layout__tab is-active" style="text-transform:capitalize; color:white;">Pemberitahuan<span class="mdl-badge count" data-badge="4"></span></a>
+      <a href="#fixed-tab-2" class="mdl-layout__tab" style="text-transform:capitalize; color:white;">List Dosen</a>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+  </div>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+      <div class="page-content">
+        <div class="demo-list-action mdl-list">
+          <div class="mdl-list__item" onclick="fanction()">
+            <span class="mdl-list__item-primary-content">
+              <span>Bryan Cranston</span>
+            </span>
+            <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">notifications</i></a>
+          </div>
+          <div class="mdl-list__item" onclick="fanction()">
+            <span class="mdl-list__item-primary-content">
+              <span>Bryan Cranston</span>
+            </span>
+            <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">notifications</i></a>
+          </div>
+          <div class="mdl-list__item" onclick="fanction()">
+            <span class="mdl-list__item-primary-content">
+              <span>Bryan Cranston</span>
+            </span>
+            <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">notifications</i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+      <div class="page-content">
+        <div class="demo-list-action mdl-list">
+          <div class="mdl-list__item">
+            <span class="mdl-list__item-primary-content"  onclick="function()" id="btn-click">
+              <i class="material-icons mdl-list__item-avatar">person</i>
+              <span>sigit</span>
+              <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+            </span>
+            <div class="=detail" id="detail" style="display:none;">
+              isi
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!--dialog for like -->
+  <script>
+          $('#btn-click').click(function(){
+              $('#btn-click').hide('fast');
+              $('#detail').dialog('open');
+          });
+
+  </script>
+
+  </body>
+</html>
